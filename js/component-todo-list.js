@@ -1,5 +1,11 @@
 import html from './html.js'; 
 
+function makeTemplate() {
+    return html`
+        <ul id="list"></ul>
+    `; 
+}
+
 function makeList(item) {
     return html`
         <li class ="to-do">
@@ -12,48 +18,36 @@ function makeList(item) {
         
 }
 
-// const template = document.createElement('template');
- 
-//     template.innerHTML = html;
 
-//     return template.content;
-
-
-class todoList {
+class TodoList {
     constructor(items, onRemove) {
         this.items = items;
         this.onRemove = onRemove; 
     }
         
     render() {
-        const dom = document.getElementById('list'); 
+        const dom = makeTemplate(); 
         this.list = dom.querySelector('ul'); 
         
         for(let i = 0; i < this.items.length; i++) {
-            todoList.add(this.items[i]); 
+            this.add(this.items[i]); 
         }
         
-        return dom;
-        // todoList.onRemove = this.onRemove; 
+        return this.list;
     } 
     add(item) {
         const dom = makeList(item); 
 
-        // const removeButton = dom.querySelector('button'); 
         const listItem = dom.querySelector('li'); 
 
         if(this.onRemove) {
             listItem.addEventListener('click', () => {
                 this.onRemove(item); 
             }); 
-        }
-        // removeButton.addEventListener('click', function() {
-        //     todoList.onRemove(item); 
-        //     listItem.remove();
-        // }); 
+        } 
 
         this.list.appendChild(dom);
     }
 }
 
-export default todoList; 
+export default TodoList; 

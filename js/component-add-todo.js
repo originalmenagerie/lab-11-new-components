@@ -18,7 +18,7 @@ function makeTemplate() {
     `; 
 }
 
-class addItem {
+class AddItem {
 
     constructor(addItem) {
         this.addItem = addItem; 
@@ -26,7 +26,7 @@ class addItem {
     render() {
         const dom = makeTemplate(); 
 
-        const form = dom.querySelector('add-form'); 
+        const form = dom.getElementById('add-form'); 
 
         
         // const form = document.getElementById('add-form'); 
@@ -55,4 +55,4 @@ class addItem {
         return dom;
     }
 } 
-export default addItem; 
+export default AddItem; 
