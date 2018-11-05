@@ -1,0 +1,22 @@
+* {
+    box-size: border-box;
+}
+
+body {
+    font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+    margin: 0;
+}
+
+header {
+    background-image: url("http://nintendochitchat.com/wp-content/uploads/2017/03/banner-pokemon.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+}
+
+.heading-two {
+    font-family: 'Ranchers', cursive;
+    font-family: 'Slackey', cursive;
+    font-size: 40px;
+    margin: 10px 25px;
+}
