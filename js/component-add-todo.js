@@ -1,10 +1,37 @@
+import html from './html.js'; 
 
-const addItem = {
+function makeTemplate() {
+    return html`
+    <form id="add-form">
+        <label>
+            Activity
+            <input required name="name">
+        </label>
+        <label>
+            Date Due
+            <input required name="date">
+        </label>
+        <label>
+            <button class ="action"> Add To List </button>
+        </label>
+        </form>
+    `; 
+}
 
-    init(addItem) {
-        const form = document.getElementById('add-form'); 
+class addItem {
 
-        form.addEventListener('submit', function(event) {
+    constructor(addItem) {
+        this.addItem = addItem; 
+    }
+    render() {
+        const dom = makeTemplate(); 
+
+        const form = dom.querySelector('add-form'); 
+
+        
+        // const form = document.getElementById('add-form'); 
+
+        form.addEventListener('submit', event => {
 
             
             event.preventDefault();
@@ -19,18 +46,13 @@ const addItem = {
         
             }; 
 
-            addItem(item); 
+            this.addItem(item); 
  
-
             form.reset();
-            
-            document.activeElement.blur();
     
         });
 
-
+        return dom;
     }
-};
-
-
+} 
 export default addItem; 
