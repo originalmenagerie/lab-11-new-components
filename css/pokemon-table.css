@@ -1,0 +1,55 @@
+
+section.results {
+    display: flex;
+    overflow: auto;
+    height: 52vh;
+}
+
+hr#results-hr {
+    border-bottom: 8px solid red;
+    border-top: 5px solid yellowgreen;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    border-collapse: inherit;
+}
+
+td {
+    background-color: yellowgreen;
+    color: purple;
+}
+
+td.headers {
+    background-color: red;
+}
+
+img {
+    width: 40px;
+    margin: 0px auto;
+}
+
+.hidden {
+    display: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: yellow; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
