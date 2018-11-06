@@ -38,6 +38,7 @@ const todosApi = {
         if(index !== -1) {
             todos.splice(index, 1);
             saveTodos();
+            return index;
         }
     }
 };

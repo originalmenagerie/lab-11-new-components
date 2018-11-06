@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 'use strict';
 import html from './html.js';
+import todosApi from './todos-api.js';
 
 function makeTemplate() {
     return html`
@@ -27,12 +28,11 @@ class TodoList {
         this.todos = todos;
         this.onRemove = onRemove;
     }
-
+    
     render() {
         const dom = makeTemplate();
         this.list = dom.querySelector('ul');
-    
-    
+        
         for(let i = 0; i < this.todos.length; i++) {
             this.add(this.todos[i]);
         }
@@ -41,17 +41,20 @@ class TodoList {
     }
 
     add(todo) {
-        const dom = makeTodo(todo);        
-        
+        const dom = makeTodo(todo); 
         if(this.onRemove) {
             const removeButton = dom.querySelector('button');
 
             removeButton.addEventListener('click', () => {
                 this.onRemove(todo);
-                this.listItem.remove();
             });
         }
         this.list.appendChild(dom);
+    }
+
+    remove(index) {
+        this.list.querySelectorAll('li')[index].remove();
+
     }
 }
 
