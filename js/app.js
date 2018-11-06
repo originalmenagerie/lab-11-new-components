@@ -9,6 +9,7 @@ const genTable = new generateTable(pokemon);
 genTable.render();
 
 const filterCall = new filter;
+filterCall.render();
 
 
 

@@ -1,4 +1,3 @@
-const pokeTable = document.getElementById('pokeTable');
 
 function makeTemplate() {
     var html = `
@@ -21,9 +20,11 @@ class generateTable {
     }
        
     render() {
-        this.html = makeTemplate();
+        const pokeTable = document.getElementById('pokeTable');
+        var html = makeTemplate();
+
         this.pokemon.forEach(item => {
-            this.html += `
+            html += `
                 <tr>
                     <td><img src="assets/pokemon/${item.id}.png"></td>
                     <td>${item.pokemon}</td>
@@ -36,7 +37,7 @@ class generateTable {
             `;
         });
     
-        pokeTable.innerHTML = this.html;
+        pokeTable.innerHTML = html;
     }
 };
 
