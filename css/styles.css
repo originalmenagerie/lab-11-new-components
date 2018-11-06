@@ -1,0 +1,27 @@
+header {
+    text-align: center;
+    padding-top: 10px;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+button {
+    background-color: #E5EBEA;
+    border: none;
+}
+
+body {
+    background-color: #E5EBEA;
+    color: #3A445D;
+}
+
+ul {
+    list-style: none;
+}
+
+section h1 {
+    padding-bottom: 10px;
+}
