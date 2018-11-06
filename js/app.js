@@ -43,7 +43,7 @@ class ItemApp {
 
         const todoList = new TodoList(items, item => {
             const index = itemsApi.remove(item);
-            todoList.remove(index);
+            todoList.remove(index); 
         });
         console.log("todo", todoList.items); 
         addTodoList.appendChild(todoList.render());

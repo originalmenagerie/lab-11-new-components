@@ -33,7 +33,7 @@ class TodoList {
             this.add(this.items[i]); 
         }
         
-        return this.list;
+        return dom;
     } 
     add(item) {
         const dom = makeList(item); 
@@ -47,6 +47,9 @@ class TodoList {
         } 
 
         this.list.appendChild(dom);
+    }
+    remove(index) {
+        this.list.querySelectorAll('li')[index].remove(); 
     }
 }
 

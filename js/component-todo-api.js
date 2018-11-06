@@ -36,6 +36,7 @@ const itemsApi = {
         if(index !== -1) {
             items.splice(index, 1); 
             saveItems(); 
+            return index;
         }
     }
 }; 

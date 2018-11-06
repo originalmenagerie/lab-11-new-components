@@ -27,9 +27,7 @@ class AddItem {
         const dom = makeTemplate(); 
 
         const form = dom.getElementById('add-form'); 
-
-        
-        // const form = document.getElementById('add-form'); 
+ 
 
         form.addEventListener('submit', event => {
 
@@ -39,7 +37,7 @@ class AddItem {
     
             const elements = form.elements;
 
-        // get the values from the form controls
+
             const item = {
                 name: elements.name.value,
                 date: elements.date.value
