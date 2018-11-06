@@ -1,7 +1,6 @@
 /* eslint-disable no-console */
 'use strict';
 import html from './html.js';
-import todosApi from './todos-api.js';
 
 function makeTemplate() {
     return html`
