@@ -1,0 +1,46 @@
+main {
+    display: flex;
+    flex-direction: column;
+    height: 25vh;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+}
+
+.text {
+    width: 50vw;
+    font-size: 1.2em;
+}
+
+.date {
+    font-size: 0.9em;
+}
+
+.btn-approve {
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    background: #93B076;
+    transition: background 0.3s ease;
+}
+
+.btn-approve:hover {
+    opacity: 1;
+    background: #A1C181;
+    text-decoration: none;
+    color: white;
+}
+
+@media (min-width: 700px) {
+
+    .to-do {
+        width: 60vw;
+    }
+
+    #to-do-form {
+        justify-content: center;
+    }
+}
