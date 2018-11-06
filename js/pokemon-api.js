@@ -1,10 +1,10 @@
 import pokeData from './data/pokedex.js';
 
 
-class pokeApi {
+class PokeApi {
     getAll() {
         return pokeData;
     }
-};
+}
 
-export default pokeApi;
+export default PokeApi;

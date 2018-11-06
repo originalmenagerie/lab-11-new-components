@@ -14,7 +14,7 @@ function makeTemplate() {
     return html;
 }
 
-class generateTable {
+class GenerateTable {
     constructor(pokemon) {
         this.pokemon = pokemon;
     }
@@ -39,6 +39,6 @@ class generateTable {
     
         pokeTable.innerHTML = html;
     }
-};
+}
 
-export default generateTable;
+export default GenerateTable;

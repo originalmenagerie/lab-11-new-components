@@ -1,19 +1,19 @@
-import pokeApi from './pokemon-api.js';
-import generateTable from './poke-table.js';
+import PokeApi from './pokemon-api.js';
+import GenerateTable from './poke-table.js';
 
-var pokemon = new pokeApi;
+var Pokemon = new PokeApi;
 
 function makeTemplate() {
     return document.getElementById('search');
 }
 
-class filter {
+class Filter {
     constructor() {
-        this.pokemon = pokemon.getAll();
+        this.pokemon = Pokemon.getAll();
     }
     
     render() {
-       const search = makeTemplate();
+        const search = makeTemplate();
         
         search.addEventListener('keyup', () => {
             let filtered = [];
@@ -37,10 +37,10 @@ class filter {
                 });
             }
 
-            var filteredResult = new generateTable(filtered);
+            var filteredResult = new GenerateTable(filtered);
             filteredResult.render();
         });
     }
-};
+}
 
-export default filter;
+export default Filter;

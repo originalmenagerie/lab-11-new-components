@@ -1,16 +1,12 @@
-import pokeApi from './pokemon-api.js';
-import generateTable from './poke-table.js';
-import filter from './pokemon-filter.js';
+import PokeApi from './pokemon-api.js';
+import GenerateTable from './poke-table.js';
+import Filter from './pokemon-filter.js';
 
-var pokemon = new pokeApi;
+var pokemon = new PokeApi;
 pokemon = pokemon.getAll();
 
-const genTable = new generateTable(pokemon);
+const genTable = new GenerateTable(pokemon);
 genTable.render();
 
-const filterCall = new filter;
+const filterCall = new Filter;
 filterCall.render();
-
-
-
-
