@@ -10,15 +10,13 @@ function makeTemplate() {
     return html`
     <form id="add-form">
         <label>
-            Activity
-            <input required name="name">
+            
         </label>
         <label>
-            Date Due
-            <input required name="date">
+            
         </label>
         <label>
-            <button class ="action"> Add To List </button>
+            
         </label>
         </form>
         <h2> List </h2>
