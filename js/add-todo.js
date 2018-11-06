@@ -1,5 +1,5 @@
-const addTask = {
-    init(onAdd) {
+class AddTask {
+    constructor(onAdd) {
         const form = document.getElementById('add-form');
         form.addEventListener('submit', function(event) {
             event.preventDefault();
@@ -17,6 +17,6 @@ const addTask = {
     }
 
 
-};
+}
 
-export default addTask;
+export default AddTask;
