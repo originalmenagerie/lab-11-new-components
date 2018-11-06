@@ -21,7 +21,6 @@ function makeTemplate() {
             <button class ="action"> Add To List </button>
         </label>
         </form>
-
         <h2> List </h2>
         <ul id="list"></ul>
     `; 
