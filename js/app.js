@@ -6,6 +6,7 @@ var pokemon = new pokeApi;
 pokemon = pokemon.getAll();
 
 const genTable = new generateTable(pokemon);
+genTable.render();
 
 const filterCall = new filter;
 
