@@ -1,0 +1,39 @@
+
+section#filter {
+    background-color: yellowgreen;
+    padding-bottom: 12px;
+    outline: 2px solid yellowgreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+}
+
+hr.purple {
+    border: 1px dashed purple;
+}
+
+hr.green {
+    border: 5px solid yellowgreen;
+}
+
+input {
+    margin: 2px;
+    height: 1em;
+    width: 7em;
+    font-size: 18px;
+}
+
+label {
+    color: purple;
+    font-style: italic;
+}
+
+p {
+    color: purple;
+    text-align: center;
+}
+
+button {
+    display: block;
+}
