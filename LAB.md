@@ -1,32 +1,58 @@
-# Lab 11: New Components
+# Pokedex Explorer
 
-Recreate either `todos` or `pokedex` lab from last week using the new sytax and tools:
-* Components are `class`es
-* `constructor` for passing and storing props (data and callbacks) from parent
-* Use `this` inside methods
-* Every component owns its template
-* Every component has a render method that returns its `dom`
+Build a table of pokemon that offers filtering!
 
-App also becomes a component! (Don't forget to create and append it to `<div id="root"></div>` in app file.
+The lab has lots of pokemon images plus a core data file located at `js/data/pokedex.js`
 
-## Component Classes
+## User Stories
 
-* `constructor` receives and stores passed data and callback functions
-* `render`:
-    * creates the dom
-    * finds needed elements
-        * manipulates elements
-        * adds event listenders
-        * stores for later on `this.` if element will need to be used in another method
-* Additional methods are added for receiving notifications from parent and applying releveant changes
-* Parent Component appends the created DOM. Examples:
-    * App adds child components to correct location in its DOM
-    * List component adds child components
-    
+* Sees a table of pokemon data
+* Can filter on at least five properties
+    * must include type (should filter both `type_1` and `type_2`)
+    * include at least one number with "minimum" number filter
+    * respond to `keyup` event (no form necessary)
+
+## Project Structure
+
+* `assets`
+    * `pokemon` images included (_id of pokemon)
+* `css`
+    * `pokemon-table.css` - _css specific to table component_
+    * `pokemon-filter.css` - _css specific to filter component_
+    * `styles.css` - _shared css_
+* `js`
+    * `app.js` - _main entry point_
+    * `data`
+        * `pokedex.js` - _source data_
+    * `html.js` - _helper function for making templates_
+    * `pokemon-api.js` - _methods for data_
+    * `pokemon-table.js` - _component for table_
+    * `pokemon-filter.js` - _component for filter_
+* `.eslintrc` - _class eslint with `source-type: "module"`_
+* `.travis.yml` - _run linting on travis_
+* `index.html` - _html document_
+* `README.md` - _info about project_
+
+## Stretch Goals
+
+### Dropdown of Types
+
+* Go through the data and compile an array of unique types
+    * Either looping and checking, or
+    * See the JavaScript `Set` class
+* Populate a dropdown of types and use that value for the type filter
+
+### Add sorting!
+
+Either:
+
+* Offer a radio button property choice plus direction
+* Clicking on certain column headers to sort on that property
+
 ## Rubric
 
-* Functionally correct for choosen lab **2pts**
-* Uses `class` and `this` for all components (including app) **3pts**
-* Each component owns template and returns from `render()` **3pts**
-* Parent component(s) create via `new`, call `render()` on instance, and append to location **2pts**
-
+* App Component inits children and orchestration **2pts**
+* Table Component initial render and update **2pts**
+* Filter Component with filter "event" **2pts**
+* Filter data **3pts**
+* Project organization, clean code **1pt**

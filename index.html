@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pokemon Table Sorting</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Sort Them Pokemons</h1>
+    </header>
+
+    <section>
+        <section id="search">
+            <select>
+                <option name="selectText" value="pokemon">Pokemon Name</option>
+                <option name="selectText" value="type_1">Type_1</option>
+                <option name="selectText" value="type_2">Type_2</option>
+            </select>
+            <input type="text" id="textBox" placeholder="text">
+            
+            <select>
+                <option name="selectNum" value="weight" value="1">Weight</option>
+                <option name="selectNum" value="height" value="1">Height</option>
+                <option name="selectNum" value="attack" value="1">Attack</option>
+            </select>
+            <input type="number" id="numBox" placeholder="minimum value">
+        </section>
+        <h2>Pokemons:</h2>
+        <table id="pokeTable">
+            
+        </table>
+    </section>
+    
+    <script type="module" src="js/app.js"></script>
+    <!-- <script type="module" src="js/poke-table.js"></script> -->
+</body>
+</html>
